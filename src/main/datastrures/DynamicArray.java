@@ -32,5 +32,15 @@ public class DynamicArray {
             System.out.println("data[i] = "+data[i]);
         }
     }
+
+    public void resize(){
+        Object[] newObj = new Object[initalizeCapacity*2];
+
+        for(int i = 0; i < size ; i++){
+            newObj[i] = data[i];
+        }
+
+        data = newObj;
+    }
 }
 
